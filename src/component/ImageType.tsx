@@ -4,8 +4,8 @@ import React from 'react';
 const ImageType = ({ category }) => {
   return (
     <View>
-      <View style={styles.imageType}>
-        <Text>{category}</Text>
+      <View style={styles.imageTypeStyle}>
+        <Text style={styles.textStyles}>{category}</Text>
       </View>
     </View>
   );
@@ -20,12 +20,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginLeft: 10,
   },
-  imageType: {
+  imageTypeStyle: {
     width: 150,
     height: 30,
     marginLeft: 10,
     marginVertical: 20,
     borderRadius: 15,
-    backgroundColor: '#E0E0E0'
+    backgroundColor: '#E0E0E0',
   },
+  textStyles: {
+    fontSize: 17,
+    textAlign: 'center'
+  }
 });
