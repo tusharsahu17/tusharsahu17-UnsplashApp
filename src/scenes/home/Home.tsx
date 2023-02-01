@@ -21,15 +21,15 @@ const Home = ({ navigation }) => {
     navigation.navigate('Login');
   };
   const { ProductData } = useSelector((state) => state.home)
-  // useEffect(() => {
-  //   dispatch({
-  //     type: FETCH_PRODUCT_DATA,
-  //   });
-  // }, [dispatch])
+  useEffect(() => {
+    dispatch({
+      type: FETCH_PRODUCT_DATA,
+    });
+  }, [dispatch])
 
-  fetch('https://unsplash.com/napi/topics')
-    .then(res => res.json())
-    .then(json => console.log('hjahdkjs===============>', json));
+  // fetch('https://unsplash.com/nabc')
+  //   .then(res => res.json())
+  //   .then(json => console.log('hjahdkjs===============>', json));
 
 
   return (
