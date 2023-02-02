@@ -26,12 +26,6 @@ const Home = ({ navigation }) => {
       type: FETCH_PRODUCT_DATA,
     });
   }, [dispatch])
-
-  // fetch('https://unsplash.com/nabc')
-  //   .then(res => res.json())
-  //   .then(json => console.log('hjahdkjs===============>', json));
-
-
   return (
     <ScrollView>
       <View style={styles.headerContainer}>
@@ -60,7 +54,11 @@ const Home = ({ navigation }) => {
         data={ProductData}
         renderItem={({ item }) =>
 
-          <UserProfile username={item.user.username} profile_img={item.user.profile_image.large} photo={item.urls.full} />
+          <UserProfile
+            username={item.user.username}
+            profile_img={item.user.profile_image.large}
+            photo={item.urls.full}
+          />
         }
         keyExtractor={item => item.id}
       />

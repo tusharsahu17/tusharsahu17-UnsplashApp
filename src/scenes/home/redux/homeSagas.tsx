@@ -16,10 +16,8 @@ export function* ProductSaga(action) {
     yield put(fetchingProductDataStarted({}));
     const { data, ok }: ApiResponse<HomeResponse> = yield call(
         apiClient.get,
-        `${API_URL.PRODUCT}`,
         `${API_URL.PRODUCT}/?${client_id}`,
     );
-    console.log('data')
     if (ok && data) {
         yield put(fetchingProductDataSuccess(data));
     } else if (!ok && data) {
